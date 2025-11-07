@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <style>
+            /* --- GLOBAL / BODY STYLES (Dark Mode) --- */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                /* Fallback dark color */
+                background-color: #121212; 
+                color: #e0e0e0; 
+                line-height: 1.6;
+                position: relative; 
+                z-index: 1; 
+            }
+            
+            /* --- IMAGE BACKGROUND STYLES --- */
+            #image-background {
+                /* Fixes the image to the viewport */
+                position: fixed; 
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -100; 
+                /* Ensures the image covers the whole screen */
+                object-fit: cover; 
+            }
+
+            /* --- OVERLAY FOR READABILITY --- */
+            .content-overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                /* Dark semi-transparent background to help text readability */
+                background: rgba(0, 0, 0, 0.5); /* Slightly darker overlay for static image */
+                z-index: -99; 
+            }
+            
+            /* --- WELCOME BANNER STYLES --- */
+            .welcome-banner {
+                position: absolute; 
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); 
+                text-align: center;
+                color: white;
+                z-index: 50; 
+                font-size: 5em; 
+                font-weight: 900;
+                text-shadow: 0 0 10px rgba(0, 0, 0, 0.9); 
+                padding: 20px;
+                line-height: 1.2;
+            }
+
+            /* --- CONTENT STYLES (Set high z-index to appear above background) --- */
+            header, .container, footer {
+                position: relative;
+                z-index: 10;
+            }
+
+            /* --- HEADER & NAVIGATION STYLES (Colorless) --- */
+            header {
+                background-color: transparent; 
+                color: white; 
+                padding: 15px 40px; 
+                border-bottom: none; 
+                display: flex; 
+                justify-content: space-between; 
+                align-items: center; 
+            }
+            
+            header h1 { margin: 0; font-size: 2em; }
+            nav a { color: white; margin-left: 20px; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+            nav a:hover { color: lightgray; }
+
+            /* Hide the main content initially */
+            .container {
+                display: flex;
+                max-width: 1200px;
+                margin: 40px auto; 
+                padding: 0 20px;
+                margin-top: 100vh; 
+            }
+
+            /* --- MAIN & ASIDE STYLES (Semi-transparent) --- */
+            main {
+                flex: 3;
+                background-color: rgba(30, 30, 30, 0.9); 
+                padding: 30px;
+                border-radius: 8px; 
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); 
+            }
+            
+            aside {
+                flex: 1;
+                background-color: rgba(44, 44, 44, 0.9); 
+                padding: 30px;
+                border-radius: 8px;
+                margin-left: 30px;
+            }
+            
+            /* General Link Styling */
+            a { color: royalblue; text-decoration: none; }
+
+            /* --- FOOTER STYLES --- */
+            footer {
+                background-color: rgba(0, 0, 0, 0.8);
+                color: #a0a0a0; 
+                text-align: center;
+                padding: 15px 0;
+                width: 100%;
+            }
+
+        </style>
+        <title>FlamefoxArts - Portfolio</title>
+    </head>
+    <body>
+        
+        <img src="download.jpeg" alt="FlamefoxArts Background Image" id="image-background">
+        
+        <div class="content-overlay"></div>
+
+        <div class="welcome-banner">
+            FlamefoxArts
+        </div>
+
+        <audio autoplay loop>
+            <source src="Velvet Skies.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        
+        <header>
+            <h1>FlamefoxArts</h1>
+            <nav>
+                <a href="#home">Home</a> 
+                <a href="#portfolio">Portfolio</a> 
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <div class="container">
+            <main>
+                <section>
+                    <h2>🔥 Latest Creations</h2>
+                    <p>The image background is much faster and cleaner than the video! Scroll down to explore the gallery.</p>
+                </section>
+                
+                <section>
+                    <h3>Featured Artwork</h3>
+                    <p>A brief description of the featured piece and a link to the full gallery.</p>
+                </section>
+            </main>
+
+            <aside>
+                <h3>Quick Links / Shop</h3>
+                <ul>
+                    <li><a href="#commissions">Commission Info</a></li>
+                    <li><a href="#store">Shop Prints & Merch</a></li>
+                    <li><a href="#social">Follow on Social Media</a></li>
+                </ul>
+            </aside>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 FlamefoxArts | All Rights Reserved.</p>
+        </footer>
+
+    </body>
+</html>
